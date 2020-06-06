@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  $("#states li").hide();
   $("#searchInput").on('keyup', function() {
     let searchValue = $(this).val();
     searchAndFilter(searchValue);
@@ -78,10 +77,13 @@ function convertState(state) {
 function searchAndFilter(searchTerm) {
   searchTerm=searchTerm.toLowerCase();
   if (searchTerm == '') {
-    $("#states li").hide();
+    $("#states").hide();
   } else {
     $("#states li").each(function() {
-      if($(this).text().toLowerCase().startsWith(searchTerm)) $(this).show();
+      if($(this).text().toLowerCase().startsWith(searchTerm)) {
+        $(this).show();
+        if(!$("#states").is(":visible")) $("#states").show();
+      }
       else $(this).hide();
     });
   }

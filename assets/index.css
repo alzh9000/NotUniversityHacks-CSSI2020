@@ -46,8 +46,44 @@ div.header button:focus, input:focus {
   color: white;
 }
 
-div.header h1 {
+div.header h1, i {
   display: inline-block;
   color: white;
+  font-size: 20px;
+  padding: 10px;
+}
 
+div.header i {
+  position: absolute;
+  margin: 20px 10px;
+  opacity: 0.5;
+}
+
+div.header input[type=text] {
+  width: 80px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  margin-left: 10px;
+  padding-left: 40px;
+}
+
+div.header input[type=text]:focus {
+  width: 210px;
+}
+
+div.header #states {
+  display: none;
+  margin-top: -12px;
+  margin-left: 245px;
+  width: 170px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+div.header #states li {
+  color: var(--background);
+  padding: 4px 20px;
+  margin-left: -26px;
+  list-style-type: none;
 }
