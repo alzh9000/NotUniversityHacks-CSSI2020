@@ -38,7 +38,7 @@ function showError(error) {
 
 function initMap() {
   geocoder = new google.maps.Geocoder;
-  document.getElementById('enter').addEventListener('click', function(){
+  document.getElementById('enter-auto').addEventListener('click', function(){
     getLocation();
   });
 }
@@ -54,7 +54,7 @@ function geocodeLatLng(input, geocoder) {
   }, function(results, status) {
     if (status === 'OK') {
       if (results[0]) {
-        console.log(results[0].address_components[4].long_name);
+        convertState(results[0].address_components[4].long_name);
       } else {
         alert('No results found');
       }
@@ -62,4 +62,8 @@ function geocodeLatLng(input, geocoder) {
       alert('Geocoder failed due to: ' + status);
     }
   });
+}
+
+function convertState(state){
+  console.log(state.replace(/\s/g, '').toLowerCase());
 }

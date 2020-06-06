@@ -9,3 +9,30 @@ body {
 img#title {
   width: 400px;
 }
+
+div.header {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+
+div.header button {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+div.header button:hover {
+  background-color: white;
+  color: var(--background);
+}
+
+div.header button:focus {
+  outline: none;
+}
