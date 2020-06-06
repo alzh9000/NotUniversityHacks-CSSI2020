@@ -1,7 +1,12 @@
 $(document).ready(function() {
+  $("#states li").hide();
+  $("#searchInput").on('keyup', function() {
+    let searchValue = $(this).val();
+    searchAndFilter(searchValue);
+  });
 });
 
-var geocoder;
+let geocoder;
 
 //LOCATION SCRIPTS//
 function getLocation() {
@@ -38,14 +43,14 @@ function showError(error) {
 
 function initMap() {
   geocoder = new google.maps.Geocoder;
-  document.getElementById('enter-auto').addEventListener('click', function(){
+  document.getElementById('enter-auto').addEventListener('click', function() {
     getLocation();
   });
 }
 
 function geocodeLatLng(input, geocoder) {
-  var latlngStr = input.split(',', 2);
-  var latlng = {
+  let latlngStr = input.split(',', 2);
+  let latlng = {
     lat: parseFloat(latlngStr[0]),
     lng: parseFloat(latlngStr[1])
   };
@@ -64,6 +69,20 @@ function geocodeLatLng(input, geocoder) {
   });
 }
 
-function convertState(state){
+function convertState(state) {
   console.log(state.replace(/\s/g, '').toLowerCase());
+}
+
+//STATE LIST//
+
+function searchAndFilter(searchTerm) {
+  searchTerm=searchTerm.toLowerCase();
+  if (searchTerm == '') {
+    $("#states li").hide();
+  } else {
+    $("#states li").each(function() {
+      if($(this).text().toLowerCase().startsWith(searchTerm)) $(this).show();
+      else $(this).hide();
+    });
+  }
 }

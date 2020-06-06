@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 :root {
   --background: rgb(138, 177, 219);
 }
 
 body {
   background: var(--background);
+  font-family: 'Montserrat', sans-serif;
 }
 
 img#title {
   width: 400px;
 }
+
+/*HEADER*/
 
 div.header {
   width: 50%;
@@ -17,7 +22,7 @@ div.header {
   margin-top: 200px;
 }
 
-div.header button {
+div.header button, input {
   color: white;
   background-color: transparent;
   border: 2px solid white;
@@ -28,11 +33,21 @@ div.header button {
   cursor: pointer;
 }
 
-div.header button:hover {
+div.header button:hover, input:hover {
   background-color: white;
   color: var(--background);
 }
 
-div.header button:focus {
+div.header button:focus, input:focus {
   outline: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+}
+
+div.header h1 {
+  display: inline-block;
+  color: white;
+
 }
