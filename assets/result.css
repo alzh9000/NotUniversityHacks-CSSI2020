@@ -9,10 +9,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-img#title {
-  width: 400px;
-}
-
 div#blank {
   position: fixed;
   left: 0;
@@ -23,16 +19,18 @@ div#blank {
   height: 100%;
 }
 
-/*HEADER*/
+/*container*/
 
-div.header {
+div.container {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 200px;
 }
 
-div.header button, input {
+div.container button {
+  margin-left: 10px;
+  display: block;
   color: white;
   background-color: transparent;
   border: 2px solid white;
@@ -43,16 +41,12 @@ div.header button, input {
   cursor: pointer;
 }
 
-div.header button:hover, input:hover {
+div.container button:hover {
   background-color: white;
   color: var(--background);
 }
 
-div.header #states li:hover {
-  margin-left: -15px;
-}
-
-div.header button:focus, input:focus {
+div.container button:focus {
   outline: none;
 }
 
@@ -61,20 +55,14 @@ div.header button:focus, input:focus {
   opacity: 0.5;
 }
 
-div.header h1, i {
+div.container h1, i {
   display: inline-block;
   color: white;
   font-size: 20px;
   padding: 10px;
 }
 
-div.header i {
-  position: absolute;
-  margin: 20px 10px;
-  opacity: 0.5;
-}
-
-div.header input[type=text] {
+div.container input[type=text] {
   width: 130px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
@@ -82,11 +70,11 @@ div.header input[type=text] {
   padding-left: 40px;
 }
 
-div.header input[type=text]:focus {
+div.container input[type=text]:focus {
   width: 210px;
 }
 
-div.header #states {
+div.container #states {
   display: none;
   margin-top: -12px;
   margin-left: 245px;
@@ -96,7 +84,7 @@ div.header #states {
   border-radius: 10px;
 }
 
-div.header #states li {
+div.container #states li {
   cursor: pointer;
   color: var(--background);
   padding: 10px 20px;
@@ -104,4 +92,8 @@ div.header #states li {
   list-style-type: none;
   font-size: 13px;
   transition: 0.3s;
+}
+
+div.container .page {
+  display: none;
 }

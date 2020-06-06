@@ -1,0 +1,31 @@
+<html lng="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<head>
+  <title>Result</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link href="assets/result.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="assets/result.js"></script>
+</head>
+
+<body>
+  <div id="blank"></div>
+  <div class="container">
+    <div class="page with-location">
+      <i class="fa fa-map-marker" aria-hidden="true"></i><h1 id="your-location"> OH</h1>
+      <!--graph here-->
+      <br><h1 id="timer"></h1>
+      <!--more info here-->
+      <br><br><button onclick="goHome()">Back</button>
+    </div>
+    <div class="page without-location">
+      <h1><i class="fa fa-map-marker" aria-hidden="true"></i></h1><h1 id="your-location">No location selected.</h1>
+      <button onclick="goHome()">Choose Location</button>
+    </div>
+  </div>
+</body>
+
+</html>

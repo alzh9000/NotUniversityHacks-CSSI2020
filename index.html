@@ -2,22 +2,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 <head>
-  <title>Profile</title>
+  <title>Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <link href="assets/index.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="assets/index.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX_7HWaVdgXkGUY0Tfxh4MBAHxyTPhMPc&callback=initMap"
-type="text/javascript"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX_7HWaVdgXkGUY0Tfxh4MBAHxyTPhMPc&callback=initMap" type="text/javascript"></script>
 </head>
 
 <body>
+  <div id="blank"></div>
   <div class="header">
     <img id="title" src="assets/title.png"></img>
-    <button id="enter">Enter</button>
+    <br>
+    <button id="enter-auto">Get Your Location!</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <h1> OR </h1>
+    <i class="fa fa-search" aria-hidden="true"></i><input type="text" id="searchInput" placeholder="Search..."></input>
+    <ul id="states">
+      <li id="AL">Alabama</li>
+      <li id="AK">Alaska</li>
+      <li id="AZ">Arizona</li>
+      <li id="AR">Arkansas</li>
+      <li id="CA">California</li>
+      <li id="CO">Colorado</li>
+      <li id="CT">Connecticut</li>
+      <li id="DE">Delaware</li>
+      <li id="FL">Florida</li>
+      <li id="GA">Georgia</li>
+      <li id="HI">Hawaii</li>
+      <li id="ID">Idaho</li>
+      <li id="IL">Illinois</li>
+      <li id="IN">Indiana</li>
+      <li id="IA">Iowa</li>
+      <li id="KS">Kansas</li>
+      <li id="KY">Kentucky</li>
+      <li id="LA">Louisiana</li>
+      <li id="ME">Maine</li>
+      <li id="MD">Maryland</li>
+      <li id="MA">Massachusetts</li>
+      <li id="MI">Michigan</li>
+      <li id="MN">Minnesota</li>
+      <li id="MS">Mississippi</li>
+      <li id="MO">Missouri</li>
+      <li id="MT">Montana</li>
+      <li id="NE">Nebraska</li>
+      <li id="NV">Nevada</li>
+      <li id="NH">New Hampshire</li>
+      <li id="NJ">New Jersey</li>
+      <li id="NM">New Mexico</li>
+      <li id="NY">New York</li>
+      <li id="NC">North Carolina</li>
+      <li id="ND">North Dakota</li>
+      <li id="OH">Ohio</li>
+      <li id="OK">Oklahoma</li>
+      <li id="OR">Oregon</li>
+      <li id="PA">Pennsylvania</li>
+      <li id="RI">Rhode Island</li>
+      <li id="SC">South Carolina</li>
+      <li id="SD">South Dakota</li>
+      <li id="TN">Tennessee</li>
+      <li id="TX">Texas</li>
+      <li id="UT">Utah</li>
+      <li id="VT">Vermont</li>
+      <li id="VA">Virginia</li>
+      <li id="WA">Washington</li>
+      <li id="WV">West Virginia</li>
+      <li id="WI">Wisconsin</li>
+      <li id="WY">Wyoming</li>
+    </ul>
   </div>
-
 </body>
 
 </html>
