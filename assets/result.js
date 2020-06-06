@@ -9,6 +9,7 @@ function initData() {
     getCountdown();
     $('.with-location').show();
   } else $('.without-location').show();
+  $("#blank").fadeOut(500);
 }
 
 function getCountdown() {
@@ -32,5 +33,6 @@ function getCountdown() {
 }
 
 function goHome() {
+  $("#blank").fadeIn(100);
   window.location.href = "index.html";
 }

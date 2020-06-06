@@ -9,9 +9,12 @@ $(document).ready(function() {
   $('#states li').click(function(e){
     goResult(e.target.id);
   });
+
+  $("#blank").fadeOut(500);
 });
 
 function goResult(state) {
+  $("#blank").fadeIn(100);
   sessionStorage.setItem("state",state);
   window.location.href = "result.html";
 }
