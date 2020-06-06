@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+  --background: rgb(138, 177, 219);
+}
+
+body {
+  background: var(--background);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/*container*/
+
+div.container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+
+div.container button {
+  margin-left: 10px;
+  display: block;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+div.container button:hover {
+  background-color: white;
+  color: var(--background);
+}
+
+div.container button:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+  opacity: 0.5;
+}
+
+div.container h1, i {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+div.container input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  margin-left: 10px;
+  padding-left: 40px;
+}
+
+div.container input[type=text]:focus {
+  width: 210px;
+}
+
+div.container #states {
+  display: none;
+  margin-top: -12px;
+  margin-left: 245px;
+  width: 170px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+div.container #states li {
+  cursor: pointer;
+  color: var(--background);
+  padding: 10px 20px;
+  margin-left: -26px;
+  list-style-type: none;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+div.container .page {
+  display: none;
+}

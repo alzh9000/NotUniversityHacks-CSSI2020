@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   //header buttons//
   $("#searchInput").on('keyup', function() {
     searchAndFilter($(this).val());
@@ -7,14 +6,15 @@ $(document).ready(function() {
   $("#searchInput").click(function() {
     searchAndFilter($(this).val());
   });
-  $('html').click(function(e) {
-    if (e.target.id != 'searchInput' && $("#states").is(":visible")) $("#states").hide();
-  });
   $('#states li').click(function(e){
-    alert(e.target.id); //TEMPORARY
+    goResult(e.target.id);
   });
-
 });
+
+function goResult(state) {
+  sessionStorage.setItem("state",state);
+  window.location.href = "result.html";
+}
 
 let geocoder;
 
@@ -68,14 +68,10 @@ function geocodeLatLng(input, geocoder) {
     'location': latlng
   }, function(results, status) {
     if (status === 'OK') {
-      if (results[0]) {
-        alert(results[0].address_components[4].short_name); //TEMPORARY
-      } else {
-        alert('No results found');
-      }
-    } else {
-      alert('Geocoder failed due to: ' + status);
+      if (results[0]) goResult(results[0].address_components[4].short_name);
+      else alert('No results found');
     }
+    else alert('Geocoder failed due to: ' + status);
   });
 }
 
