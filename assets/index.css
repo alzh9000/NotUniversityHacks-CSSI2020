@@ -1,0 +1,11 @@
+:root {
+  --background: rgb(138, 177, 219);
+}
+
+body {
+  background: var(--background);
+}
+
+img#title {
+  width: 400px;
+}
