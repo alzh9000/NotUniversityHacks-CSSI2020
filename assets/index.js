@@ -1,8 +1,19 @@
 $(document).ready(function() {
+
+  //header buttons//
   $("#searchInput").on('keyup', function() {
-    let searchValue = $(this).val();
-    searchAndFilter(searchValue);
+    searchAndFilter($(this).val());
   });
+  $("#searchInput").click(function() {
+    searchAndFilter($(this).val());
+  });
+  $('html').click(function(e) {
+    if (e.target.id != 'searchInput' && $("#states").is(":visible")) $("#states").hide();
+  });
+  $('#states li').click(function(e){
+    alert(e.target.id); //TEMPORARY
+  });
+
 });
 
 let geocoder;
@@ -58,7 +69,7 @@ function geocodeLatLng(input, geocoder) {
   }, function(results, status) {
     if (status === 'OK') {
       if (results[0]) {
-        convertState(results[0].address_components[4].long_name);
+        alert(results[0].address_components[4].short_name); //TEMPORARY
       } else {
         alert('No results found');
       }
@@ -66,10 +77,6 @@ function geocodeLatLng(input, geocoder) {
       alert('Geocoder failed due to: ' + status);
     }
   });
-}
-
-function convertState(state) {
-  console.log(state.replace(/\s/g, '').toLowerCase());
 }
 
 //STATE LIST//

@@ -38,12 +38,17 @@ div.header button:hover, input:hover {
   color: var(--background);
 }
 
+div.header #states li:hover {
+  margin-left: -15px;
+}
+
 div.header button:focus, input:focus {
   outline: none;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: white;
+  opacity: 0.5;
 }
 
 div.header h1, i {
@@ -60,7 +65,7 @@ div.header i {
 }
 
 div.header input[type=text] {
-  width: 80px;
+  width: 130px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   margin-left: 10px;
@@ -82,8 +87,11 @@ div.header #states {
 }
 
 div.header #states li {
+  cursor: pointer;
   color: var(--background);
-  padding: 4px 20px;
+  padding: 10px 20px;
   margin-left: -26px;
   list-style-type: none;
+  font-size: 13px;
+  transition: 0.3s;
 }
