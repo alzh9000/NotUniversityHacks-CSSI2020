@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+body{
+  font-family: 'Poppins', sans-serif;
+}
+section{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header{
+  background: #333333 url(../images/big-title-image.jpg) no-repeat;
+background-size: cover;
+color: #fff;
+padding: 6em 0;
+text-align: center;
+background-position: center; /* Center the image */
+position: relative;
+
+}
+
+.homepage #header {
+    padding: 3em 0 4em 0;
+
+}
+.container {
+    max-width: none!important;
+    min-width: 0!important;
+    width: 90%!important;
+    margin-left: auto;
+    margin-right: auto;
+}
+#banner {
+    padding: 0;
+    text-align: center;
+}
+header.major {
+    padding-bottom: 2em;
+}
+header.major img{
+  width: 60%;
+}
+#banner .major h2 {
+    font-size: 2em;
+}
+#banner .major .byline {
+    font-size: 3em;
+    font-weight: 600;
+    margin: 0;
+}
+.button {
+
+}
+.sign-up{
+color: #061F2A;
+background-color: white;
+font-weight: 600;
+font-size: 1.5em;
+text-align: center;
+padding: 10px;
+text-decoration: none;
+border-radius: 8px;
+}
+/* Section */
+.title{
+  text-align: center;
+}
+.side-by-side{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+}
+.slightly-rounded{
+  border-radius: 16px;
+}
+.word-block{
+  width: 50%;
+}
+.word-block h2{
+
+}
+.word-block p{
+  line-height: 2;
+}
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.feature-block{
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+.feature-block img{
+
+}
+/* Solution */
