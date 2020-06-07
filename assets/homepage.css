@@ -1,122 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
-body{
-  font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root {
+  --background: rgb(138, 177, 219);
 }
-section{
-  width: 80%;
+
+body {
+  background: var(--background);
+  font-family: 'Montserrat', sans-serif;
+}
+
+img#title {
+  width: 400px;
+}
+
+div#blank {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  background-color: var(--background);
+  width: 100%;
+  height: 100%;
+}
+
+/*HEADER*/
+
+div.header {
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-}
-.header{
-  background: #333333 url(../images/big-title-image.jpg) no-repeat;
-background-size: cover;
-color: #fff;
-padding: 6em 0;
-text-align: center;
-background-position: center; /* Center the image */
-position: relative;
-
+  margin-top: 200px;
 }
 
-.homepage #header {
-    padding: 3em 0 4em 0;
-
-}
-.container {
-    max-width: none!important;
-    min-width: 0!important;
-    width: 90%!important;
-    margin-left: auto;
-    margin-right: auto;
-}
-#banner {
-    padding: 0;
-    text-align: center;
-}
-header.major {
-    padding-bottom: 2em;
-}
-header.major img{
-  width: 60%;
-}
-#banner .major h2 {
-    font-size: 2em;
-}
-#banner .major .byline {
-    font-size: 3em;
-    font-weight: 600;
-    margin: 0;
-}
-.button {
-
-}
-.sign-up{
-color: #061F2A;
-background-color: white;
-font-weight: 600;
-font-size: 1.5em;
-text-align: center;
-padding: 10px;
-text-decoration: none;
-border-radius: 8px;
+div.header button, input {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-.img-circular{
-  border-radius: 50%;
-  width: 400px; 
-}
-/* Section */
-.title{
-  text-align: center;
-}
-.side-by-side{
-  display: flex;
-  flex-direction: row;
-  justify-content:space-around;
-  align-items: center;
-}
-.slightly-rounded{
-  border-radius: 16px;
-}
-.side-by-side .word-block{
-  width: 50%;
-}
-.word-block h2{
-
-}
-.word-block p{
-  line-height: 2;
-}
-.features {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.feature-block{
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.feature-block img{
-  height: 50%;
-}
-.feature-block .word-block{
-  width: 80%;
-}
-.feature-block h2{
-  text-align: center;
+div.header button:hover, input:hover {
+  background-color: white;
+  color: var(--background);
 }
 
-/* search stuff from w3schools */
-input[type=text] {
+div.header #states li:hover {
+  margin-left: -15px;
+}
+
+div.header button:focus, input:focus {
+  outline: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+  opacity: 0.5;
+}
+
+div.header h1, i {
+  display: inline-block;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+}
+
+div.header i {
+  position: absolute;
+  margin: 20px 10px;
+  opacity: 0.5;
+}
+
+div.header input[type=text] {
   width: 130px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
+  margin-left: 10px;
+  padding-left: 40px;
 }
-/* When the input field gets focus, change its width to 100% */
-input[type=text]:focus {
-  width: 80%%;
+
+div.header input[type=text]:focus {
+  width: 210px;
 }
-/* Solution */
+
+div.header #states {
+  display: none;
+  margin-top: -12px;
+  margin-left: 245px;
+  width: 170px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+div.header #states li {
+  cursor: pointer;
+  color: var(--background);
+  padding: 10px 20px;
+  margin-left: -26px;
+  list-style-type: none;
+  font-size: 13px;
+  transition: 0.3s;
+}

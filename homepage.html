@@ -2,102 +2,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
 <head>
-  <title>Profile</title>
-  <link href="assets/normalize.css" rel="stylesheet" type="text/css">
-  <link href="assets/homepage.css" rel="stylesheet" type="text/css">
+  <title>Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <link href="assets/original.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="assets/index.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX_7HWaVdgXkGUY0Tfxh4MBAHxyTPhMPc&callback=initMap" type="text/javascript"></script>
 </head>
 
 <body>
-<!-- Header
-<header class="major">
-  <img class="dropredictor" src="images/title.png"></img>
-  <span class="byline">Predicting Drought</span>
-</header>
-<a href="#" class="button">GET STARTED</a>
-<h2>Dropredictor</h2>
-
--->
-  <div class="header" >
-    <!-- Banner -->
-      <div id="banner">
-        <div class="container">
-            <header class="major">
-                <img src="./images/title.png" />
-                <h3 class="byline">Predicting Drought</h3>
-            </header>
-            <a href="#" class="button sign-up">Sign Up</a>
-        </div>
-      </div>
+  <div id="blank"></div>
+  <div class="header">
+    <img id="title" src="assets/title.png"></img>
+    <br>
+    <button id="enter-auto">Get Your Location!</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <h1> OR </h1>
+    <i class="fa fa-search" aria-hidden="true"></i><input type="text" id="searchInput" placeholder="Search..."></input>
+    <ul id="states">
+      <li id="AL">Alabama</li>
+      <li id="AK">Alaska</li>
+      <li id="AZ">Arizona</li>
+      <li id="AR">Arkansas</li>
+      <li id="CA">California</li>
+      <li id="CO">Colorado</li>
+      <li id="CT">Connecticut</li>
+      <li id="DE">Delaware</li>
+      <li id="FL">Florida</li>
+      <li id="GA">Georgia</li>
+      <li id="HI">Hawaii</li>
+      <li id="ID">Idaho</li>
+      <li id="IL">Illinois</li>
+      <li id="IN">Indiana</li>
+      <li id="IA">Iowa</li>
+      <li id="KS">Kansas</li>
+      <li id="KY">Kentucky</li>
+      <li id="LA">Louisiana</li>
+      <li id="ME">Maine</li>
+      <li id="MD">Maryland</li>
+      <li id="MA">Massachusetts</li>
+      <li id="MI">Michigan</li>
+      <li id="MN">Minnesota</li>
+      <li id="MS">Mississippi</li>
+      <li id="MO">Missouri</li>
+      <li id="MT">Montana</li>
+      <li id="NE">Nebraska</li>
+      <li id="NV">Nevada</li>
+      <li id="NH">New Hampshire</li>
+      <li id="NJ">New Jersey</li>
+      <li id="NM">New Mexico</li>
+      <li id="NY">New York</li>
+      <li id="NC">North Carolina</li>
+      <li id="ND">North Dakota</li>
+      <li id="OH">Ohio</li>
+      <li id="OK">Oklahoma</li>
+      <li id="OR">Oregon</li>
+      <li id="PA">Pennsylvania</li>
+      <li id="RI">Rhode Island</li>
+      <li id="SC">South Carolina</li>
+      <li id="SD">South Dakota</li>
+      <li id="TN">Tennessee</li>
+      <li id="TX">Texas</li>
+      <li id="UT">Utah</li>
+      <li id="VT">Vermont</li>
+      <li id="VA">Virginia</li>
+      <li id="WA">Washington</li>
+      <li id="WV">West Virginia</li>
+      <li id="WI">Wisconsin</li>
+      <li id="WY">Wyoming</li>
+    </ul>
   </div>
-<section>
-  <div class="problem">
-    <h1 class="title">The Problem</h1>
-    <!-- Insert Countdown -->
-      <img src=""/>
-    <!-- circle images with text -->
-    <div class="side-by-side">
-      <div class="word-block">
-        <h2>The Drought Crisis</h2>
-        <p>
-Drought is bad. It is increasingly becoming more common. That is horrible and terrible. Would not recommend because no water is bad for humanz. It is so terribly bad. Horrible even. Maybe even a despicable thought. No me gusta. No me gusta nada.
-        </p>
-      </div>
-      <img src="./images/drought-crisis.png"  class="img-circular"/>
-    </div>
-    <div class="side-by-side">
-      <img src="./images/desert-dry.png" class="img-circular"/>
-    <div class="word-block">
-      <h2>How Bad Is It?</h2>
-      <p>
-Very scary. Very much concerned. Oh no really scary stats are being included. Ahhhhhhhhhhhhhhhhhhh. Please do a panic. Panicking is a good thing. This should scare you very very much. Yeeeeeeeeeeeeeeeeeeeet. Oh wow that’s a year.
-      </p>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="solution">
-    <h1 class="title">Solution</h1>
-    <div class="side-by-side">
-    <img class="slightly-rounded" src="./images/Drought-Predictor.png" alt="dropedictor mobile version"/>
-    <div class="word-block">
-      <h2>Introducing: Dropedictor</h2>
-      <p>
-        Words that explain why this is a good thing and lots of stuff like that. Blah Blah. Lorem ipsum etc. Ta da! We predict drought and that’s neat. We also let you see things you can do to help. We love water. Water is awesome.
-      </p>
-    </div>
-    </div>
-    <h1>Features</h1>
-    <div class="features">
-      <div class="feature-block">
-        <img src="./images/search-location-solid.svg" alt="location search"/>
-        <div class="word-block">
-          <h2>Location</h2>
-          <p>
-It finds stuff and that’s nifty. Location stuff what a concept
-          </p>
-        </div>
-      </div>
-      <div class="feature-block">
-        <img src="./images/meteor-solid.svg" alt="location search"/>
-        <div class="word-block">
-          <h2>Countdown</h2>
-          <p>
-We’ll tell you when to freak out. Unless you already should be. :)
-          </p>
-        </div>
-      </div>
-      <div class="feature-block">
-        <img src="./images/water-solid.svg" alt="water waves"/>
-        <div class="word-block">
-          <h2>Water</h2>
-          <p>
-I don’t actually know what the third feature is.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 </body>
 
 </html>
