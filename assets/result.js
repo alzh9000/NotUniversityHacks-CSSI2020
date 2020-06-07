@@ -59,8 +59,7 @@ function getCountdown() {
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="timer"
-    document.getElementById("timer").innerHTML = years + "y " + months + "m " + days + "d " + hours + "h " +
-      minutes + "m " + seconds + "s ";
+    document.getElementById("timer").innerHTML = years + "y ";
   }, 1000);
 }
 
