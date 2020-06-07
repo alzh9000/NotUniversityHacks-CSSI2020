@@ -18,7 +18,9 @@ with open("ai_predictions.csv", 'w') as file:
   
   for path_name in glob("""drought_data\State Data\*.csv"""):
     
-    
+    path_sections = path_name.split('\\')
+    state_name = path_sections[-1]
+    print(state_name)
     
     df = pd.read_csv(path_name, parse_dates=['MapDate'], index_col='MapDate')
 
@@ -55,5 +57,5 @@ with open("ai_predictions.csv", 'w') as file:
     print("Covariance of coefficients:") 
     print(param_cov) 
 
-    writer.writerow({'State': "Georgia", 'Years until next drought': param[1]})
+    writer.writerow({'State': state_name, 'Years until next drought': param[1]})
   
