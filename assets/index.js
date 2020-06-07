@@ -7,7 +7,9 @@ $(document).ready(function() {
     searchAndFilter($(this).val());
   });
   $('#states li').click(function(e){
+    console.log(e.target.id);
     goResult(e.target.id);
+
   });
 
   $("#blank").fadeOut(500);
@@ -18,8 +20,6 @@ function goResult(state) {
   sessionStorage.setItem("state",state);
   window.location.href = "result.html";
 }
-
-let geocoder;
 
 //LOCATION SCRIPTS//
 function getLocation() {
