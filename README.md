@@ -32,7 +32,7 @@ We learned a lot about modeling data, and how to best visualize data to effectiv
 In addition to being able to predict when the next drought would happen, we want Dropredictor to show how individuals affect water sources and the environment around them. Our next steps for Dropredictor would be to ask users to input their water habits and illustrate how their water footprint affects the availability of water. Our web app would advise users on how they can reduce their water usage and lower their water footprint. We could also create native mobile apps to enhance the user experience on mobile devices, though our current web app also already works on mobile. :)
 
 ## Submission Video
-Our submission video is in this shared Google Photos album: https://photos.app.goo.gl/3PZjpDifR9T68ShFA
+Our submission video is this YouTube video: https://youtu.be/E_10wRnhwF8
 
 
 
