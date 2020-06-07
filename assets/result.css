@@ -19,6 +19,10 @@ div#blank {
   height: 100%;
 }
 
+#timer{
+    color: black;
+    font-size: 60px;
+}
 /*container*/
 
 div.container {
