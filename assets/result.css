@@ -7,6 +7,7 @@
 body {
   background: var(--background);
   font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 div#blank {
@@ -19,6 +20,11 @@ div#blank {
   height: 100%;
 }
 
+#timer{
+    color: black;
+    text-align: center;
+    font-size: 60px;
+}
 /*container*/
 
 div.container {
