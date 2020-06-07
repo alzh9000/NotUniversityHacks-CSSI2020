@@ -46,21 +46,17 @@ droughts = {
 
 function getCountdown() {
   $("#description").html("Until " + state + " has a drought.");
-  let now = new Date(2020);
-  let countDownDate = new Date(2020+Math.ceil(droughts[state])); //TEMPORARY
+  let now = new Date(2020, 3, 7);
+  let countDownDate = new Date(2020+Math.floor(droughts[state]), Math.floor((droughts[state]%1)*12), 1); //TEMPORARY
   // Update the count down every 1 second
   let x = setInterval(function() {
     let distance = countDownDate - now;
-    console.log(distance);
-    let years = Math.floor(distance);
+    let years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
     let months = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * (365 / 12)));
     let days = Math.floor((distance % (1000 * 60 * 60 * 24 * (365 / 12))) / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="timer"
-    document.getElementById("timer").innerHTML = years + "y ";
+    document.getElementById("timer").innerHTML = years + "y " + months + "m " + days + "d";
   }, 1000);
 }
 
