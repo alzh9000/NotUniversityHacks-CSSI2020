@@ -2,8 +2,10 @@ $(document).ready(function() {
   initData();
 });
 
+let state;
+
 function initData() {
-  let state = sessionStorage.getItem("state");
+  state = sessionStorage.getItem("state");
   if (state) {
     $('#your-location').html(state);
     getCountdown();
@@ -45,7 +47,7 @@ droughts = {
 function getCountdown() {
   let now = new Date("June 7, 2020");
   let year = now.getFullYear();
-  let countDownDate = new Date(year+9, now.getMonth(), now.getDay()).getTime(); //TEMPORARY
+  let countDownDate = new Date(year+droughts[state], now.getMonth(), now.getDay()).getTime(); //TEMPORARY
   // Update the count down every 1 second
   let x = setInterval(function() {
     let distance = countDownDate - now;
