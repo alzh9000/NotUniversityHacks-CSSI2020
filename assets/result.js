@@ -45,6 +45,7 @@ droughts = {
 }
 
 function getCountdown() {
+  $("#description").html("Until " + state + " has a drought.");
   let now = new Date(2020);
   let countDownDate = new Date(2020+Math.ceil(droughts[state])); //TEMPORARY
   // Update the count down every 1 second
