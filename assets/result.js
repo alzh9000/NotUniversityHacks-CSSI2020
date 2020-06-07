@@ -45,13 +45,13 @@ droughts = {
 }
 
 function getCountdown() {
-  let now = new Date("June 7, 2020");
-  let year = now.getFullYear();
-  let countDownDate = new Date(year+droughts[state], now.getMonth(), now.getDay()).getTime(); //TEMPORARY
+  let now = new Date(2020);
+  let countDownDate = new Date(2020+Math.ceil(droughts[state])); //TEMPORARY
   // Update the count down every 1 second
   let x = setInterval(function() {
     let distance = countDownDate - now;
-    let years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+    console.log(distance);
+    let years = Math.floor(distance);
     let months = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * (365 / 12)));
     let days = Math.floor((distance % (1000 * 60 * 60 * 24 * (365 / 12))) / (1000 * 60 * 60 * 24));
     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
