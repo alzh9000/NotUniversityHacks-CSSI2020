@@ -36,3 +36,43 @@ function goHome() {
   $("#blank").fadeIn(100);
   window.location.href = "index.html";
 }
+
+randomNumber = Math.floor(Math.random()*5+1);
+
+window.onload = function() {
+	if (randomNumber == 1) {
+		document.getElementById("tip1").style.display = "inline";
+		document.getElementById("tip2").style.display = "none";
+		document.getElementById("tip3").style.display = "none";
+		document.getElementById("tip4").style.display = "none";
+        document.getElementById("tip5").style.display = "none";
+	}
+	if (randomNumber == 2) {
+		document.getElementById("tip1").style.display = "none";
+		document.getElementById("tip2").style.display = "inline";
+		document.getElementById("tip3").style.display = "none";
+		document.getElementById("tip4").style.display = "none";
+        document.getElementById("tip5").style.display = "none";
+	}
+	if (randomNumber == 3) {
+		document.getElementById("tip1").style.display = "none";
+		document.getElementById("tip2").style.display = "none";
+		document.getElementById("tip3").style.display = "inline";
+		document.getElementById("tip4").style.display = "none";
+        document.getElementById("tip5").style.display = "none";
+	}
+	if (randomNumber == 4) {
+		document.getElementById("tip1").style.display = "none";
+		document.getElementById("tip2").style.display = "none";
+		document.getElementById("tip3").style.display = "none";
+		document.getElementById("tip4").style.display = "inline";
+        document.getElementById("tip5").style.display = "none";
+	}
+    if (randomNumber == 5) {
+		document.getElementById("tip1").style.display = "none";
+		document.getElementById("tip2").style.display = "none";
+		document.getElementById("tip3").style.display = "none";
+		document.getElementById("tip4").style.display = "none";
+        document.getElementById("tip5").style.display = "inline";
+	}
+}
