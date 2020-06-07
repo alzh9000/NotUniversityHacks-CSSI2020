@@ -59,6 +59,9 @@ function initMap() {
   document.getElementById('enter-auto').addEventListener('click', function() {
     getLocation();
   });
+  document.getElementById('enter-auto-2').addEventListener('click', function() {
+    getLocation();
+  });
 }
 
 function geocodeLatLng(input, geocoder) {
