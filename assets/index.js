@@ -1,3 +1,5 @@
+let stateInit = [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY' ];
+
 $(document).ready(function() {
   //header buttons//
   $("#searchInput").on('keyup', function() {
@@ -74,7 +76,12 @@ function geocodeLatLng(input, geocoder) {
     'location': latlng
   }, function(results, status) {
     if (status === 'OK') {
-      if (results[0]) goResult(results[0].address_components[4].short_name);
+      if (results[0]) {
+        let init = results[0].address_components[4].short_name;
+        if (stateInit.includes(results[0].address_components[5].short_name)) init = results[0].address_components[5].short_name;
+        else if (stateInit.includes(results[0].address_components[3].short_name)) init = results[0].address_components[3].short_name;
+        goResult(init);
+      }
       else alert('No results found');
     }
     else alert('Geocoder failed due to: ' + status);
