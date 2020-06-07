@@ -2,8 +2,10 @@ $(document).ready(function() {
   initData();
 });
 
+let state;
+
 function initData() {
-  let state = sessionStorage.getItem("state");
+  state = sessionStorage.getItem("state");
   if (state) {
     $('#your-location').html(state);
     getCountdown();
@@ -43,13 +45,14 @@ droughts = {
 }
 
 function getCountdown() {
-  let now = new Date("June 7, 2020");
-  let year = now.getFullYear();
-  let countDownDate = new Date(year+9, now.getMonth(), now.getDay()).getTime(); //TEMPORARY
+  $("#description").html("Until " + state + " has a drought.");
+  let now = new Date(2020);
+  let countDownDate = new Date(2020+Math.ceil(droughts[state])); //TEMPORARY
   // Update the count down every 1 second
   let x = setInterval(function() {
     let distance = countDownDate - now;
-    let years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365));
+    console.log(distance);
+    let years = Math.floor(distance);
     let months = Math.floor((distance % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * (365 / 12)));
     let days = Math.floor((distance % (1000 * 60 * 60 * 24 * (365 / 12))) / (1000 * 60 * 60 * 24));
     let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -57,8 +60,7 @@ function getCountdown() {
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="timer"
-    document.getElementById("timer").innerHTML = years + "y " + months + "m " + days + "d " + hours + "h " +
-      minutes + "m " + seconds + "s ";
+    document.getElementById("timer").innerHTML = years + "y ";
   }, 1000);
 }
 
