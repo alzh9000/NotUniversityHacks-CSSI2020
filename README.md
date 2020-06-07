@@ -29,6 +29,9 @@ We’re really proud of creating an app that’s beneficial to society and helps
 We learned a lot about modeling data, and how to best visualize data to effectively communicate our ideas to a larger audience. We also learned a lot about plotting and decomposing data, as well as time series regression. It was also a lot of fun learning more about how to conserve water usage and contribute to sustainability and help the environment. Beyond learning these concepts, we also feel like we improved our remote work and communication skills through hacking together remotely. 
 
 ## What's next for Dropredictor
-In addition to being able to predict when the next drought would happen, we want Dropredictor to show how individuals affect water sources and the environment around them. Our next steps for Dropredictor would be to ask users to input their water habits and illustrate how their water footprint affects the availability of water. Our web app would advise users on how they can reduce their water usage and lower their water footprint. We could also create 
+In addition to being able to predict when the next drought would happen, we want Dropredictor to show how individuals affect water sources and the environment around them. Our next steps for Dropredictor would be to ask users to input their water habits and illustrate how their water footprint affects the availability of water. Our web app would advise users on how they can reduce their water usage and lower their water footprint. We could also create native mobile apps to enhance the user experience on mobile devices, though our current web app also already works on mobile. :)
+
+
+
 
 
